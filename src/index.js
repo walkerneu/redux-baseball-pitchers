@@ -21,9 +21,26 @@ const catcherList = (state=['Roy Campanella', 'Elston Howard', 'Kenji Jojima'], 
     return state
 }
 
+const currentPitcher = (state='Maud Nelson', action) => {
+    if (action.type === "CURRENT_PITCHER"){
+        const newCurrentPitcher = action.payload
+        return newCurrentPitcher
+    }
+    return state
+}
+
+const currentCatcher = (state='Elston Howard', action) => {
+    if (action.type === "CURRENT_CATCHER"){
+        const newCurrentCatcher = action.payload
+        return newCurrentCatcher
+    }
+    return state
+}
+
 const baseballStore = createStore(
     combineReducers({
-        pitcherList, catcherList
+        pitcherList, catcherList, currentPitcher, currentCatcher,
+
     })
 );
 
