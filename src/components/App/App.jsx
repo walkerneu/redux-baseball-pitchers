@@ -1,5 +1,3 @@
-import {useState} from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 import TotalPitchers from '../TotalPitchers/TotalPitchers';
 import TotalCatchers from '../TotalCatchers/TotalCatchers';
 import OnTheMound from '../OnTheMound/OnTheMound';
